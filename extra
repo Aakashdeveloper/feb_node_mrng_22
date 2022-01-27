@@ -1,0 +1,64 @@
+https://code.visualstudio.com/ > install
+https://nodejs.org/en/ > install
+https://github.com/Aakashdeveloper > signup
+https://git-scm.com/downloads > install
+https://www.postman.com/ > download & install
+
+NPM
+Basic NodeJS(in built)(Os,file,http)
+NodeJS(full Stack App) (Node-EJS-Mongo-Express)
+Third Party Api (Weather Api)
+Redis  > 6379
+redisWithMongo
+Node-Es6(.babel)
+ImageUpload
+MongoDb Basic >27017  (local/cloud)
+Api with NodeJS(Rest)>1
+DashBoard(Crud)
+Swagger
+Github
+--Deployment of app---
+Heroku
+Pm2
+Docker
+Nginx
+Testing
+Login/Logout(JWT)
+Oauth(with github)
+Oauth(with google)
+GraphQl API
+NodeJs with postgres
+Paytm-Payment
+Email With Node(sendgird)(https://app.sendgrid.com/)
+Chatapp
+TelegramChat
+///////////////////////////////////
+FIREBASE
+--------NOT---------
+React/Angular
+Html/css/jquery
+
+///////////
+NodeJs
+> Single thread async non blocking I/O
+
+convert code => machine code
+engine V8
+open source
+
+npm > node package manager
+
+JSON> JavaScript Object Notation
+Way to represent data
+> Key value pair of data
+[
+    {
+        "name":"John",
+        "class":"Node"
+    },
+    {
+        "name":"Ankit",
+        "class":"UI"
+        "city":"Delhi"
+    }
+]
