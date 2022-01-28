@@ -5,6 +5,7 @@ https://git-scm.com/downloads > install
 https://www.postman.com/ > download & install
 
 NPM
+///////
 Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJS-Mongo-Express)
 Third Party Api (Weather Api)
@@ -62,3 +63,26 @@ Way to represent data
         "city":"Delhi"
     }
 ]
+
+////////////////////////////////////////////////////////////////
+package.json
+> entry point to the app
+> contains all commands(start,build,test)
+> all the packages we are using
+> metadata (name,description,version)
+
+///////////
+step to generate package.json
+//////////
+**NodeJs must be installed in laptop
+> go inside the folder using cmd/terminal
+> npm init
+> answer all the questions
+> type "yes"
+
+
+///////////
+step to install packages
+//////////
+> go inside the folder using cmd/terminal
+> npm i packagename
