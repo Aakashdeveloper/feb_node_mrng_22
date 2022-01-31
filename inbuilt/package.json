@@ -1,0 +1,15 @@
+{
+  "name": "myapp",
+  "version": "1.0.1",
+  "description": "this is about node",
+  "main": "fs.js",
+  "scripts": {
+    "start": "node http.js",
+    "dev":"nodemon http.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "nareshit",
+  "license": "ISC"
+}

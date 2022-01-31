@@ -5,8 +5,8 @@ https://git-scm.com/downloads > install
 https://www.postman.com/ > download & install
 
 NPM
-///////
 Basic NodeJS(in built)(Os,file,http)
+/////
 NodeJS(full Stack App) (Node-EJS-Mongo-Express)
 Third Party Api (Weather Api)
 Redis  > 6379
@@ -86,3 +86,17 @@ step to install packages
 //////////
 > go inside the folder using cmd/terminal
 > npm i packagename
+
+
+nodemon
+////
+Global Package for windows
+/////
+> open cmd as admin
+> npm i -g nodemon
+
+////
+Global Package for Mac Linux
+/////
+> open terminal
+> sudo npm i -g nodemon
