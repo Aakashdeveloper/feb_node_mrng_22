@@ -4,6 +4,17 @@ https://github.com/Aakashdeveloper > signup
 https://git-scm.com/downloads > install
 https://www.postman.com/ > download & install
 
+(add to chrome)
+https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+
+//Extensions
+> TabNine
+> vscode-icons
+> git history
+> git Lens
+> spellCheck
+> eslint
+
 NPM
 Basic NodeJS(in built)(Os,file,http)
 /////
@@ -100,3 +111,25 @@ Global Package for Mac Linux
 /////
 > open terminal
 > sudo npm i -g nodemon
+
+
+///es5
+function add(a,b){
+    return a+b
+}
+
+add(1,2)
+
+//Es6
+const add = (a,b) => {return a+b}
+
+//http methods
+get
+post
+put
+delete
+
+C> Create (post)
+R> Read  (get)
+U> Update (put)
+D> Delete (delete)
