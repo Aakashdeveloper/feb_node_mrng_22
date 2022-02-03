@@ -1,5 +1,15 @@
 let express = require('express');
-let productRoutes = express.Router();
+let app = express();
+let dotenv = require('dotenv')
+dotenv.config()
+let port = process.env.PORT || 8690;
+let morgan = require('morgan');
+let fs = require('fs');
+let categoryRoutes = express.Router();
+let productRoutes = express.Router()
+
+// save app logs in file
+app.use(morgan('common',{stream:fs.createWriteStream('./app.log')}))
 
 var products = [
     {
@@ -515,15 +525,57 @@ var products = [
     }
 ]
 
+var category = [
+    {
+        "id":1,
+        "category": "Fashion",
+        "thumb":"https://i.ibb.co/56VP0Fn/cloths.jpg"
+    },
+    {
+        "id":2,
+        "category":"Electronics",
+        "thumb":"https://i.ibb.co/pw5Wtdx/appliances.jpg"
+    },
+    {
+        "id":3,
+        "category":"Essentials",
+        "thumb":"https://i.ibb.co/0cw34xm/essentials.jpg"
+    },
+    {
+        "id":4,
+        "category": "Footwear",
+        "thumb":"https://i.ibb.co/r3SZq8S/footware.jpg"
+    }
+]
+
+app.get('/',function(req,res){
+    res.send('<h1>Node Fullstack</h1>')
+})
+
+categoryRoutes.route('/')
+    .get(function(req,res){
+        res.send(category)
+    })
+
+categoryRoutes.route('/details')
+    .get(function(req,res){
+        res.send('Category Details')
+    })
 
 productRoutes.route('/')
-.get(function(req,res){
-    res.send(products)
-})
+    .get(function(req,res){
+        res.send(products)
+    })
 
 productRoutes.route('/details')
-.get(function(req,res){
-    res.send('Products Details')
-})
+    .get(function(req,res){
+        res.send('Products Details')
+    })
 
-module.exports = productRoutes
+app.use('/category', categoryRoutes);
+app.use('/products', productRoutes);
+
+app.listen(port, function(err){
+    if(err) throw err
+    console.log(`Server running on port ${port}`)
+})
