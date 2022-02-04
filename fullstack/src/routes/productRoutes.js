@@ -515,15 +515,20 @@ var products = [
     }
 ]
 
+function router(menu){
 
-productRoutes.route('/')
-.get(function(req,res){
-    res.send(products)
-})
+    productRoutes.route('/')
+    .get(function(req,res){
+        res.render('products',{title:'Products',data:products,menu})
+    })
+    
+    productRoutes.route('/details')
+    .get(function(req,res){
+        res.send('Products Details')
+    })
 
-productRoutes.route('/details')
-.get(function(req,res){
-    res.send('Products Details')
-})
+    return productRoutes
+}
 
-module.exports = productRoutes
+
+module.exports = router

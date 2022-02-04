@@ -1,6 +1,7 @@
 let express = require('express');
 let categoryRoutes = express.Router();
 
+
 var category = [
     {
         "id":1,
@@ -23,14 +24,21 @@ var category = [
         "thumb":"https://i.ibb.co/r3SZq8S/footware.jpg"
     }
 ]
-categoryRoutes.route('/')
-    .get(function(req,res){
-        res.render('category',{title:'Category',data:category})
-    })
 
-categoryRoutes.route('/details')
-    .get(function(req,res){
-        res.send('Category Details')
-    })
+function router(menu){
 
-module.exports = categoryRoutes
+    categoryRoutes.route('/')
+        .get(function(req,res){
+            res.render('category',{title:'Category',data:category,menu})
+        })
+
+    categoryRoutes.route('/details')
+        .get(function(req,res){
+            res.send('Category Details')
+        })
+
+    return categoryRoutes
+
+}
+
+module.exports = router

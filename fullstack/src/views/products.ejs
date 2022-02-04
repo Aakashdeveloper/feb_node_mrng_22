@@ -93,15 +93,19 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="<%=data[i].thumb%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img alt="" src="<%=data[i].Image%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
-              <h3><%=data[i].category%></h3>
+              <h3><%=data[i].product_name%></h3>
               <div class="row">
                 <div class="col-xs-9">
-                  <h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted"><a href="<%=data[i].link%>" class="text-muted">Read More</a></small>
-                  </h4></div>
+                    <h4><span class="label label-default">Rs.<%=data[i].Price%></span></h4>
+                    <h4><span class="label label-default"><%=data[i].category%></span></h4>
+                    <h4>
+                        <small style="font-family:courier,'new courier';" class="text-muted"><%=data[i].Color%> • <a href="#" class="text-muted"><%=data[i].Brand ? data[i].Brand: data[i].company %></a>
+                        </small>
+                    </h4>
+                </div>
                 <div class="col-xs-3"></div>
               </div>
               <br><br>

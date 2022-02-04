@@ -5,8 +5,16 @@ dotenv.config()
 let port = process.env.PORT || 8690;
 let morgan = require('morgan');
 let fs = require('fs');
-let categoryRoutes = require('./src/routes/categoryRoutes');
-let productRoutes = require('./src/routes/productRoutes');
+
+let menu = [
+    {link:'/', name:'Home'},
+    {link:'/category', name:'Category'},
+    {link:'/products', name:'Product'},
+    {link:'/restaurants', name:'Restaurants'}
+]
+
+let categoryRoutes = require('./src/routes/categoryRoutes')(menu);
+let productRoutes = require('./src/routes/productRoutes')(menu);
 
 // save app logs in file
 app.use(morgan('common',{stream:fs.createWriteStream('./app.log')}))
@@ -33,7 +41,7 @@ let catData = [
 ]
 
 app.get('/',function(req,res){
-    res.render('index',{title:'Home Page',data:catData})
+    res.render('index',{title:'Home Page',data:catData,menu})
 })
 
 app.use('/category', categoryRoutes);

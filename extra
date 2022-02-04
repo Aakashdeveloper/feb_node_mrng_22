@@ -133,3 +133,35 @@ C> Create (post)
 R> Read  (get)
 U> Update (put)
 D> Delete (delete)
+
+//local Mongo
+> https://www.mongodb.com/try/download/community
+
+# windows
+> create folder 'data' in c drive (c:\data)
+> create folder 'db' in data (c:\data\db)
+
+> open first cmd
+> go inside programFile/mongodb/server/5.0/bin
+> inside bin > mongod   (start mongodb server on port 27017)
+* Do not close this cmd
+
+> open second cmd
+> go inside programFile/mongodb/server/5.0/bin
+> mongo   (console to test query)
+
+
+
+#mac
+> open terminal
+> mkdir data/db
+
+> open first terminal
+> mongod --dbpath data/db
+* Do not close this terminal
+
+> open second terminal
+> mongo
+
+//Mongo on cloud
+> signup https://account.mongodb.com/account/login
