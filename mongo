@@ -1,0 +1,123 @@
+
+//local Mongo
+> https://www.mongodb.com/try/download/community
+
+# windows
+> create folder 'data' in c drive (c:\data)
+> create folder 'db' in data (c:\data\db)
+
+> open first cmd
+> go inside programFile/mongodb/server/5.0/bin
+> inside bin > mongod   (start mongodb server on port 27017)
+* Do not close this cmd
+
+> open second cmd
+> go inside programFile/mongodb/server/5.0/bin
+> mongo   (console to test query)
+
+
+
+#mac
+> open terminal
+> mkdir data/db
+
+> open first terminal
+> mongod --dbpath data/db
+* Do not close this terminal
+
+> open second terminal
+> mongo
+
+//Mongo on cloud
+> signup https://account.mongodb.com/account/login
+
+SQL    
+> sql
+> postgres
+
+NoSQL
+> mongodb
+> couchdb
+
+Sno | English | Hindi | Computer
+1   |   80    |       |   80
+2   |         |  80   |
+3   |         |  90   |   80  
+
+[
+    {
+        sno:1,
+        english:80,
+        computer:80
+    },
+    {
+        sno:2,
+        hindi:80
+    },
+    {
+        sno:3,
+        hindi:90,
+        computer:80
+    }
+]
+
+Sql        Mongo
+Database   Database
+table      collection
+row        documents
+select     find
+insert     insert
+delete     remove
+update     update
+
+///// to see all dbs
+show dbs
+
+> go inside db
+    > use database name
+
+> to see all collection
+    > show collections
+
+> to see data in collection
+    db.collectionName.find()
+
+> to create new db
+    > use database name
+
+> to create new collection/insert
+    > db.employee.insert({name:"Amit",city:"Pune"})
+{ "_id" : ObjectId("62009ab6454b0b940dec13ea"), "name" : "Amit", "city" : "Pune" }
+
+
+db.employee.insert({_id:1,name:"Nikita",city:"Paris"})
+db.employee.insert({_id:2,name:"Kanika",city:"Mumbai"})
+
+_id(12bytes)
+5 bytes (random number)
+3 bytes (series)
+4 bytes (timestamp)
+
+
+db.category.insert([
+    {
+        "_id":1,
+        "category": "Fashion",
+        "thumb":"https://i.ibb.co/56VP0Fn/cloths.jpg"
+    },
+    {
+        "_id":2,
+        "category":"Electronics",
+        "thumb":"https://i.ibb.co/pw5Wtdx/appliances.jpg"
+    },
+    {
+        "_id":3,
+        "category":"Essentials",
+        "thumb":"https://i.ibb.co/0cw34xm/essentials.jpg"
+    },
+    {
+        "_id":4,
+        "category": "Footwear",
+        "thumb":"https://i.ibb.co/r3SZq8S/footware.jpg"
+    }
+])
