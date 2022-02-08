@@ -21,7 +21,6 @@ function router(menu){
                     })
                 }
             })
-            
         })
 
     categoryRoutes.route('/details')
