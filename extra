@@ -20,13 +20,11 @@ Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJS-Mongo-Express)
 Third Party Api (Weather Api)
 Redis  > 6379
-/////
 redisWithMongo
 ImageUpload
-
+/////
 Node-Es6(.babel)
 MongoDb Basic >27017  (local/cloud)
-
 Api with NodeJS(Rest)>1
 DashBoard(Crud)
 Swagger
@@ -161,3 +159,5 @@ FLUSHALL
 npm i redis > latest version
 
 npm i redis@3.1.2
+
+npm i @babel/core @babel/register @babel/preset-env
