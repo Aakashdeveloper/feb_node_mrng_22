@@ -121,3 +121,51 @@ db.category.insert([
         "thumb":"https://i.ibb.co/r3SZq8S/footware.jpg"
     }
 ])
+
+db.restaurent.find({"type.mealtype":"2"}).pretty()
+
+db.restaurent.find({area:"41",city:"1"}).pretty()
+
+//projection
+db.restaurent.find({},{name:1,_id:0,locality:1}).pretty()
+
+db.restaurent.find({},{name:1}).pretty()
+
+db.restaurent.find({city:"2"},{name:1,_id:0,locality:1}).pretty()
+
+
+db.restaurent.find({cost:{$lt:500}}).pretty()
+
+db.restaurent.find({$and:[{cost:{$gt:300,$lt:500}}]}).pretty()
+
+db.restaurent.find({"type.mealtype":{$in:['3','4']}}).pretty()
+
+////////////////////////////////////////////////////////////////////////
+Update
+///////
+db.collection.update(
+    {condition},
+    {update}
+)
+
+db.employee.update(
+    {"name" : "Nikita"},
+    {
+        $set:{
+            "city":"Amsterdam",
+            "phone":7867867677
+        }
+    }
+)
+
+db.employee.update(
+    {"name" : "Kanika"},
+    {
+        $unset:{
+            "city":1
+        }
+    }
+)
+
+////
+db.employee.remove({"name" : "Kanika"})
