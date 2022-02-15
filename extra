@@ -161,3 +161,7 @@ npm i redis > latest version
 npm i redis@3.1.2
 
 npm i @babel/core @babel/register @babel/preset-env
+
+npm i express ejs mongodb cors body-parser
+npm i chai chai-http mocha
+npm i swagger-ui-express
