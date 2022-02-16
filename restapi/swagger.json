@@ -1,0 +1,79 @@
+{
+    "openapi":"3.0.0",
+    "info":{
+        "description":"This is the api for user management",
+        "version":"__version__"
+    },
+    "tags":[
+        {
+            "name":"PUBLIC ROUTE",
+            "description": "PUBLIC ROUTE"
+        }
+    ],
+    "paths":{
+        "/health":{
+            "summary":"Testing Health",
+            "get":{
+                "description": "Getting health of server",
+                "tags":["PUBLIC ROUTE"],
+                "responses":{
+                    "200":{
+                        "description": "Health OK"
+                    }
+                }
+            }
+        },
+        "/users":{
+            "summary":"Getting Users",
+            "get":{
+                "description": "Getting Users",
+                "tags":["PUBLIC ROUTE"],
+                "parameters":[
+                    {
+                        "in":"query",
+                        "name":"role",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description": "Choose Role as Admin or User"
+                    },
+                    {
+                        "in":"query",
+                        "name":"city",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description": "Enter Your City"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description": "Health OK"
+                    }
+                }
+            }
+        },
+        "/user/{id}":{
+            "summary":"Getting Particular Users",
+            "get":{
+                "description": "Getting Particular User",
+                "tags":["PUBLIC ROUTE"],
+                "parameters":[
+                    {
+                        "in":"path",
+                        "name":"id",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description": "Choose Role as Admin or User"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description": "Health OK"
+                    }
+                }
+            }
+        }
+    }
+}
