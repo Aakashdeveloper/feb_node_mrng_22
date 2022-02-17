@@ -74,6 +74,93 @@
                     }
                 }
             }
+        },
+        "/addUser":{
+            "summary":"Adding New User",
+            "post":{
+                "description": "Adding New User",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "name": "Amit",
+                                "city": "Venice",
+                                "phone": 345346457,
+                                "role": "User",
+                                "isActive": true
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description": "Health OK"
+                    }
+                }
+            }
+        },
+        "/updateUser":{
+            "summary":"Update User",
+            "put":{
+                "description": "Update User",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id": "620b27b8406cc3c86a7be036",
+                                "name": "Amit",
+                                "city": "Venice",
+                                "phone": 345346457,
+                                "role": "User",
+                                "isActive": true
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description": "User Updated"
+                    }
+                }
+            }
+        },
+        "/deleteUser":{
+            "summary":"Delete User",
+            "delete":{
+                "description": "Delete User",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id": "620b27b8406cc3c86a7be036"
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description": "User Updated"
+                    }
+                }
+            }
         }
     }
 }

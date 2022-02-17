@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node apiwithoutUi.js",
-    "dev":"nodemon apiwithoutUi.js"
+    "dev":"nodemon apiwithUi.js",
+    "ui":"node apiwithUi.js",
+    "test":"mocha --timeout 10000"
   },
   "repository": {
     "type": "git",
