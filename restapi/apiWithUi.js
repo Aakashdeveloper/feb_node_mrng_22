@@ -21,40 +21,27 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-app.get('/',(req,res) => {
-    res.status(200).send('Health Ok')
-})
+// static file path
+app.use(express.static(__dirname+'/public'))
+// html file path
+app.set('views','./src/views')
+// view engine
+app.set('view engine', 'ejs')
 
 app.get('/health',(req,res) => {
     res.status(200).send('Health Ok')
 })
 
-//Read
-app.get('/users',(req,res) => {
-    let query = {};
-    if(req.query.city && req.query.role){
-        query ={city:req.query.city,role:req.query.role,isActive:true}
-    }
-    else if(req.query.city){
-        query ={city:req.query.city,isActive:true}
-    }else if(req.query.role){
-        query ={role:req.query.role,isActive:true}
-    }else if(req.query.isActive){
-        let isActive = req.query.isActive;
-        if(isActive == "false"){
-            isActive = false
-        }else{
-            isActive = true
-        }
-        query = {isActive}
-    }
-    else(
-        query ={isActive:true}
-    )
-    db.collection(col_name).find(query).toArray((err,result) => {
+app.get('/',(req,res) => {
+    db.collection(col_name).find({}).toArray((err,result) => {
         if(err) throw err;
-        res.status(200).send(result)
+        res.status(200).render('index',{data:result})
     })
+})
+
+//render Form
+app.get('/new',(req,res) => {
+    res.render('admin')
 })
 
 //find particular user
@@ -68,10 +55,18 @@ app.get('/user/:id',(req,res) => {
 
 // Add User > post
 app.post('/addUser',(req,res)=>{
+    const data = {
+        "name":req.body.name,
+        "city":req.body.city,
+        "phone":req.body.phone,
+        "role":req.body.role?req.body.role:'User',
+        "isActive":true
+    }
     //console.log(req.body)
-    db.collection(col_name).insert(req.body,(err,result) => {
+    db.collection(col_name).insert(data,(err,result) => {
         if(err) throw err;
-        res.status(200).send('User Added')
+        //res.status(200).send('User Added')
+        res.redirect('/')
     })
 })
 
@@ -84,7 +79,7 @@ app.put('/updateUser',(req,res) => {
                 name:req.body.name,
                 city:req.body.city,
                 phone:req.body.phone,
-                role:req.body.role,
+                role:req.body.role?req.body.role:'User',
                 isActive:true
             }
         },(err,result) => {
