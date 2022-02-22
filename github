@@ -1,0 +1,24 @@
+// from new folder first time
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/testrepo.git
+git push -u origin master
+
+
+//
+git status
+
+// next all time form same folder
+git add .
+git commit -m "first commit"
+git push
+
+//git branches
+git checkout -b branchname
+git checkout branchname
+
+
+> master > take pull > make new branch of your feature > push to new branch > create PR
+
+https://raw.githubusercontent.com/Aakashdeveloper/Aakashdeveloper/master/README.md
