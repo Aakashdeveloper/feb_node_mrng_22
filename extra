@@ -29,15 +29,14 @@ Swagger
 Testing
 DashBoard(Crud)
 Github
+Login/Logout(JWT)
+Oauth(with github)
 --Deployment of app---
 Heroku
-/////
 Pm2
 Docker
 Nginx
-
-Login/Logout(JWT)
-Oauth(with github)
+///////////////
 Oauth(with google)
 GraphQl API
 NodeJs with postgres
@@ -45,7 +44,6 @@ Paytm-Payment
 Email With Node(sendgird)(https://app.sendgrid.com/)
 Chatapp
 TelegramChat
-///////////////////////////////////
 FIREBASE
 --------NOT---------
 React/Angular
@@ -183,3 +181,16 @@ npm i swagger-ui-express
 /******UserInfo*****/
 (GET) => https://developerjwt.herokuapp.com/api/auth/userinfo
 (Header) => {'x-access-token':'token value from login'}
+
+
+/// 6620addaebfe96489ead
+/// a4db13f8886954016ba0ae1dc432f15a0932973f
+
+Pm2
+> npm i -g pm2
+> pm2 start filename
+> pm2 status
+> pm2 stop filename
+
+docker build . -t imageName
+docker run -p 9700:9800 imageName
