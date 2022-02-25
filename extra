@@ -36,8 +36,8 @@ Heroku
 Pm2
 Docker
 Nginx
-///////////////
 Oauth(with google)
+///////////////
 GraphQl API
 NodeJs with postgres
 Paytm-Payment
@@ -194,3 +194,4 @@ Pm2
 
 docker build . -t imageName
 docker run -p 9700:9800 imageName
+
