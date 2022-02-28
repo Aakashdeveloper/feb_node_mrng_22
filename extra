@@ -37,8 +37,8 @@ Pm2
 Docker
 Nginx
 Oauth(with google)
-///////////////
 GraphQl API
+///////////////
 NodeJs with postgres
 Paytm-Payment
 Email With Node(sendgird)(https://app.sendgrid.com/)
@@ -195,3 +195,24 @@ Pm2
 docker build . -t imageName
 docker run -p 9700:9800 imageName
 
+////
+npx json-server --watch db.json --port 8200
+
+/******
+{
+  Products(id:5){
+    product_name,
+    Price,
+    Size
+  }
+}
+
+
+mutation{
+  addProducts(
+    id:50,
+    product_name:"Test product",
+  ){
+    id
+  }
+}
