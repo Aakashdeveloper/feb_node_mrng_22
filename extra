@@ -38,13 +38,15 @@ Docker
 Nginx
 Oauth(with google)
 GraphQl API
-///////////////
 NodeJs with postgres
+///////////////
+FIREBASE
+TelegramChat
 Paytm-Payment
 Email With Node(sendgird)(https://app.sendgrid.com/)
 Chatapp
-TelegramChat
-FIREBASE
+
+
 --------NOT---------
 React/Angular
 Html/css/jquery
