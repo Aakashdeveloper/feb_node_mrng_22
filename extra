@@ -221,3 +221,13 @@ mutation{
 
 brew services start postgresql
 brew services stop postgresql
+
+
+npm i -g firebase-tools
+
+firebase login
+firebase init
+> firebae functions
+> javascript
+> all default option
+firebase deploy
