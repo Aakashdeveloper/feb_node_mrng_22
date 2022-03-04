@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 const db = admin.firestore();
 
-exports.addCiti = functions.https.onRequest(async (req, res) => {
+exports.addCiti = functions.https.onRequest(func (req, res) => {
   const citiesRef = db.collection("decnode");
   await citiesRef.doc("Pune").set({
     "name": "Pune", "country": "India", "population": 567778,
