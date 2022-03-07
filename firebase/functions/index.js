@@ -10,10 +10,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 const db = admin.firestore();
 
-exports.addCiti = functions.https.onRequest(func (req, res) => {
+exports.addMessage = functions.https.onRequest(async (req, res) => {
   const citiesRef = db.collection("decnode");
-  await citiesRef.doc("Pune").set({
-    "name": "Pune", "country": "India", "population": 567778,
+  await citiesRef.doc("Mumbai").set({
+    "name": "Mumbai", "country": "India", "population": 4645,
+    "capital": false,
+  });
+  res.send("Data Added");
+});
+
+exports.addCiti = functions.https.onRequest(async (req, res) => {
+  const citiesRef = db.collection("decnode");
+  await citiesRef.doc("Mumbai").set({
+    "name": "Mumbai", "country": "India", "population": 4645,
     "capital": false,
   });
   res.send("Data Added");
